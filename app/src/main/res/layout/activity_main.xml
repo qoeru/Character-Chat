@@ -1,6 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-</RelativeLayout>
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    android:paddingBottom="20dp"
+    android:paddingTop="20dp">
+
+    <!-- top panel with avatar, chat and settings icon-->
+    <LinearLayout
+        android:id="@+id/Top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/UserAvatar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/user_s_avatar"
+            android:scaleType="centerInside"
+            android:src="@drawable/user"
+            android:background="@color/white" >
+
+        </ImageButton>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:text="@string/Chats"
+            android:textSize="20dp">
+
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/settingIcon"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/settings_icon"
+            android:src="@drawable/ic_launcher_background"
+            android:scaleType="centerInside"
+            android:background="@color/white" >
+
+        </ImageButton>
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:layout_marginHorizontal="40dp"
+        android:hint="Search">
+    </EditText>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp" >
+            <ImageButton
+                android:id="@+id/CharacterAvatar"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:contentDescription="@string/user_s_avatar"
+                android:scaleType="centerInside"
+                android:src="@drawable/user"
+                android:background="@color/white"
+                android:layout_alignParentLeft="true"
+                >
+            </ImageButton>
+
+            <TextView
+                android:id="@+id/CharacterName"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/CharacterMessage"
+                android:layout_marginHorizontal="20dp"
+                android:layout_toRightOf="@id/CharacterAvatar"
+                android:autoText="false"
+                android:text="testtext"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/CharacterMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/CharacterAvatar"
+                android:layout_marginHorizontal="20dp"
+                android:layout_centerVertical="true"
+                android:text="testtext2">
+            </TextView>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
