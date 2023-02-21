@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingLeft="25dp"
+    android:paddingTop="20dp"
     android:paddingRight="25dp"
-    android:paddingBottom="20dp"
-    android:paddingTop="20dp">
+    android:paddingBottom="20dp">
 
     <!-- top panel with avatar, chat and settings icon-->
     <LinearLayout
         android:id="@+id/Top"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.7"
+        android:layout_weight="0.6"
         android:orientation="horizontal">
 
-        <ImageButton
+        <ImageView
             android:id="@+id/UserAvatar"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@color/white"
             android:contentDescription="@string/user_s_avatar"
             android:scaleType="centerInside"
-            android:src="@drawable/user"
-            android:background="@color/white" >
+            android:src="@drawable/ic_launcher_background">
 
-        </ImageButton>
+        </ImageView>
 
 
         <TextView
@@ -43,43 +44,48 @@
         <ImageButton
             android:id="@+id/settingIcon"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
             android:contentDescription="@string/settings_icon"
-            android:src="@drawable/ic_launcher_background"
             android:scaleType="centerInside"
-            android:background="@color/white" >
+            android:src="@drawable/ic_launcher_background">
 
         </ImageButton>
 
     </LinearLayout>
 
+    <!--search-->
     <EditText
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
         android:layout_marginHorizontal="40dp"
+        android:layout_weight="0.6"
         android:hint="Search">
+
     </EditText>
 
+    <!--character and add-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="7" >
+        android:layout_weight="7">
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp" >
-            <ImageButton
+            android:layout_height="70dp">
+
+            <ImageView
                 android:id="@+id/CharacterAvatar"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:contentDescription="@string/user_s_avatar"
-                android:scaleType="centerInside"
-                android:src="@drawable/user"
-                android:background="@color/white"
                 android:layout_alignParentLeft="true"
-                >
-            </ImageButton>
+                android:background="@color/white"
+                android:contentDescription="@string/user_s_avatar"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_launcher_background">
+
+            </ImageView>
 
             <TextView
                 android:id="@+id/CharacterName"
@@ -88,7 +94,6 @@
                 android:layout_above="@id/CharacterMessage"
                 android:layout_marginHorizontal="20dp"
                 android:layout_toRightOf="@id/CharacterAvatar"
-                android:autoText="false"
                 android:text="testtext"
                 android:textStyle="bold">
 
@@ -98,14 +103,25 @@
                 android:id="@+id/CharacterMessage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/CharacterAvatar"
-                android:layout_marginHorizontal="20dp"
                 android:layout_centerVertical="true"
+                android:layout_marginHorizontal="20dp"
+                android:layout_toRightOf="@id/CharacterAvatar"
                 android:text="testtext2">
+
             </TextView>
 
         </RelativeLayout>
 
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:text="+"
+            android:textSize="20dp"
+            app:backgroundTint="#BF8383">
+
+        </Button>
 
     </RelativeLayout>
 
