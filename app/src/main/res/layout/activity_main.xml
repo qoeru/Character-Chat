@@ -119,7 +119,9 @@
             android:layout_alignParentBottom="true"
             android:text="+"
             android:textSize="20dp"
-            app:backgroundTint="#BF8383">
+            android:textColor="@color/pink"
+            android:backgroundTint="@color/light_pink"
+            >
 
         </Button>
 
