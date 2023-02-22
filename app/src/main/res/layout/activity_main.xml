@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -27,7 +27,7 @@
             android:layout_weight="1"
 
             android:contentDescription="@string/user_s_avatar"
-            android:scaleType="fitCenter"
+            android:scaleType="centerInside"
             >
 
         </ImageView>
@@ -50,7 +50,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/white"
+            android:background="@null"
             android:contentDescription="@string/settings_icon"
             android:scaleType="centerInside"
             android:src="@drawable/settings">
@@ -61,12 +61,12 @@
 
     <!--search-->
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="0dp"
         android:layout_weight="0.5"
         android:hint="Search"
         android:paddingLeft="15dp"
-
+        android:layout_gravity="center"
         android:layout_marginVertical="20dp"
         android:layout_marginHorizontal="40dp"
         android:textColorHint="@color/pink"
