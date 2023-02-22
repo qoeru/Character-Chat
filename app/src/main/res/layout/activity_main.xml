@@ -18,17 +18,20 @@
         android:layout_weight="0.6"
         android:orientation="horizontal">
 
-        <ImageView
+        <ImageButton
+            android:background="@drawable/round_bg"
             android:id="@+id/UserAvatar"
+            android:src="@drawable/user"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/white"
+            android:clipToOutline="true"
+
             android:contentDescription="@string/user_s_avatar"
             android:scaleType="fitCenter"
-            android:src="@drawable/user">
+            >
 
-        </ImageView>
+        </ImageButton>
 
 
         <TextView
@@ -63,12 +66,14 @@
         android:layout_height="0dp"
         android:layout_weight="0.5"
         android:hint="Search"
-        android:paddingLeft="10dp"
+        android:paddingLeft="15dp"
+
         android:layout_marginVertical="20dp"
         android:layout_marginHorizontal="40dp"
         android:textColorHint="@color/pink"
         android:textColor="@color/pink"
-        android:background="@color/light_pink"
+        android:background="@drawable/round_bg"
+        android:backgroundTint="@color/light_pink"
         >
 
     </EditText>
@@ -83,18 +88,19 @@
             android:layout_width="match_parent"
             android:layout_height="70dp">
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/CharacterAvatar"
 
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_alignParentLeft="true"
-                android:background="@color/white"
+                android:background="@drawable/round_bg"
+                android:clipToOutline="true"
                 android:contentDescription="@string/user_s_avatar"
                 android:scaleType="fitCenter"
                 android:src="@drawable/ray">
 
-            </ImageView>
+            </ImageButton>
 
             <TextView
                 android:id="@+id/CharacterName"
@@ -127,14 +133,17 @@
         </RelativeLayout>
 
         <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:text="+"
             android:textSize="20dp"
-            android:textColor="@color/pink"
-            android:backgroundTint="@color/light_pink"
+            android:background="@drawable/round_bg"
+            android:textColor="@color/light_pink"
+
+            android:backgroundTint="@color/pink"
             >
 
         </Button>
