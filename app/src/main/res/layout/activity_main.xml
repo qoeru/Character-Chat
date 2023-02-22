@@ -18,20 +18,19 @@
         android:layout_weight="0.6"
         android:orientation="horizontal">
 
-        <ImageButton
-            android:background="@drawable/round_bg"
+        <ImageView
+            android:foreground="@drawable/fg_round"
             android:id="@+id/UserAvatar"
             android:src="@drawable/user"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:clipToOutline="true"
 
             android:contentDescription="@string/user_s_avatar"
             android:scaleType="fitCenter"
             >
 
-        </ImageButton>
+        </ImageView>
 
 
         <TextView
@@ -72,7 +71,7 @@
         android:layout_marginHorizontal="40dp"
         android:textColorHint="@color/pink"
         android:textColor="@color/pink"
-        android:background="@drawable/round_bg"
+        android:background="@drawable/bg_round"
         android:backgroundTint="@color/light_pink"
         >
 
@@ -88,19 +87,18 @@
             android:layout_width="match_parent"
             android:layout_height="70dp">
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/CharacterAvatar"
 
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_alignParentLeft="true"
-                android:background="@drawable/round_bg"
-                android:clipToOutline="true"
+                android:foreground="@drawable/fg_round"
                 android:contentDescription="@string/user_s_avatar"
-                android:scaleType="fitCenter"
+                android:scaleType="centerInside"
                 android:src="@drawable/ray">
 
-            </ImageButton>
+            </ImageView>
 
             <TextView
                 android:id="@+id/CharacterName"
@@ -140,7 +138,7 @@
             android:layout_alignParentBottom="true"
             android:text="+"
             android:textSize="20dp"
-            android:background="@drawable/round_bg"
+            android:background="@drawable/bg_round"
             android:textColor="@color/light_pink"
 
             android:backgroundTint="@color/pink"
