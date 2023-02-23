@@ -27,22 +27,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageView userPic = (ImageView) findViewById(R.id.UserPic);
-        ImageView characterPic = (ImageView) findViewById(R.id.CharacterAvatar);
+//        ImageView userPic = (ImageView) findViewById(R.id.UserPic);
+//        ImageView characterPic = (ImageView) findViewById(R.id.CharacterAvatar);
         //text
+
+//        TextView characterMessage = (TextView) findViewById(R.id.CharacterMessage);
+//        EditText search = (EditText) findViewById(R.id.search);
+//        //buttons
+//        Button addNewCharacter = (Button) findViewById(R.id.newCharacterButton);
+//        ImageButton settingsButton = (ImageButton) findViewById(R.id.settingIcon);
+
+
         TextView characterName = (TextView) findViewById(R.id.CharacterName);
-        TextView characterMessage = (TextView) findViewById(R.id.CharacterMessage);
-        EditText search = (EditText) findViewById(R.id.search);
-        //buttons
-        Button addNewCharacter = (Button) findViewById(R.id.newCharacterButton);
-        ImageButton settingsButton = (ImageButton) findViewById(R.id.settingIcon);
+        Bundle arguments = getIntent().getExtras();
 
-//        View.OnClickListener listener = v -> Log.i(TAG, "Button clicked!");
-//        addNewCharacter.setOnClickListener(listener);
+        if(arguments != null)
+        {
+            String newCharacterName = arguments.getString("newCharacterName");
+            characterName.setText(newCharacterName);
+        }
     }
-
-    //images
-
 
 }
 
