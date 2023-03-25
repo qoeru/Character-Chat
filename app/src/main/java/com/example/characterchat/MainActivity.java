@@ -45,10 +45,10 @@ public class MainActivity extends AppCompatActivity {
         userPic.setImageResource(R.drawable.user);
 
         TextView characterMessage = (TextView) findViewById(R.id.CharacterMessage);
-        characterMessage.setText("Hello World!");
+        characterMessage.setText(R.string.hello_world);
 
         Button addNewCharacter = (Button) findViewById(R.id.newCharacterButton);
-        addNewCharacter.setText("+");
+        addNewCharacter.setText(R.string.plus);
 
         ImageView characterPic = (ImageView) findViewById(R.id.CharacterAvatar);
 

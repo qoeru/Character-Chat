@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Character Chat</string>
+    <string name="hello_world">Hello World</string>
+    <string name="plus">+</string>
     <string name="user_s_avatar">User\'s avatar</string>
     <string name="Chats">Chats</string>
     <string name="settings_icon">settings_icon</string>
